@@ -1,0 +1,3 @@
+<% @entries.each do |e| %>
+  <% if @myUserId != e.user_id %>
+      <h2><%= e.user.name %>さんとのトークルーム</h2>
