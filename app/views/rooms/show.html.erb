@@ -13,3 +13,9 @@
         <p><%= m.message %></p>
     <% end %>
   <% end %>
+
+<%= form_for @message do |f| %>
+  <%= f.text_field :message, placeholder: "メッセージ入力してください" , size: 50, class:"form-text_field" %>
+     <% f.hidden_field :room_id, value: @room.id %>
+        <%= f.submit "投稿",class: 'form-submit' %>
+<% end %>
