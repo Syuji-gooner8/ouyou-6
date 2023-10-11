@@ -1,3 +1,15 @@
 <% @entries.each do |e| %>
   <% if @myUserId != e.user_id %>
       <h2><%= e.user.name %>さんとのトークルーム</h2>
+  <% end %>
+<% end %>
+<%= link_to "ユーザー一覧に戻る", users_path %>
+
+
+  <% if @messages.present? %>
+    <% @messages.each do |m| %>
+      <% @myUserId == m.user.id %>
+      <p><%= m.user.name %></p>
+        <p><%= m.message %></p>
+    <% end %>
+  <% end %>
