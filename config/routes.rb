@@ -12,9 +12,7 @@ Rails.application.routes.draw do
    end
    resources :groups, only: [:new, :index, :show, :create, :edit, :update]
 
-   resources :users, only: [:show,:edit,:update]
-   resources :messages, only: [:create]
-   resources :rooms, only: [:create,:show]
+
 
   root to: "homes#top"
   get "home/about"=>"homes#about",as: "about"
