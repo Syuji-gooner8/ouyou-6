@@ -12,7 +12,8 @@ Rails.application.routes.draw do
    end
    resources :groups, only: [:new, :index, :show, :create, :edit, :update]
 
-
+   resources :chats, only: [:show, :create, :destroy]
+   
 
   root to: "homes#top"
   get "home/about"=>"homes#about",as: "about"
